@@ -17,7 +17,8 @@ LABEL version = "0.7.1" \
 
 
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+    apt-get install -y --no-install-recommends \
     firefox \
     apulse \
     unzip \
